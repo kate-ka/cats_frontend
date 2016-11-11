@@ -15,7 +15,7 @@ angular
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'views/car_pages.html',
-                controller: 'ArticlesCtrl as articles'
+                templateUrl: 'views/main.html',
+                controller: 'MainPageCtrl as main'
             });
     } ]);

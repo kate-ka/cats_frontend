@@ -8,16 +8,16 @@
  * Controller of the kishkaApp
  */
 angular.module('kishkaApp')
-  .controller('ArticlesCtrl', ['pages',function (pages) {
+  .controller('MainPageCtrl', ['pages',function (pages) {
         var vm = this;
-        vm.items = [];
-        vm.pages = []
+        vm.carouselArticles = [];
+        vm.articles = [];
         pages.getCarouselPages().then(function(response) {
-            vm.items = response.data;
+            vm.carouselArticles = response.data;
 
         });
 
         pages.getPages().then(function(response) {
-            vm.pages = response.data;
+            vm.articles = response.data;
         })
   }]);
