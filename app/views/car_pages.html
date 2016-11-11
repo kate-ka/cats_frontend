@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12">
-         <!--<div ng-repeat="item in articles.items">-->
-                <!--<li>{{item}}</li>-->
-                <!--</div>-->
+        <!--<div ng-repeat="item in articles.items">-->
+        <!--<li>{{item}}</li>-->
+        <!--</div>-->
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
@@ -12,7 +12,7 @@
                 <li data-target="#mycarousel" data-slide-to="2"></li>
             </ol>
 
-            <div  class="carousel-inner" role="listbox" >
+            <div class="carousel-inner" role="listbox">
                 <div class="item" ng-class="{active:!$index}" ng-repeat="item in articles.items">
                     <img class="img-responsive"
                          src="images/{{item.image}}" alt="Котик">
@@ -23,7 +23,7 @@
 
                         <p>{{item.caption}}</p>
 
-                        <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                        <p><a class="btn btn-primary btn-xs" href="#">Читати далі &raquo;</a></p>
                     </div>
                 </div>
 
@@ -40,4 +40,27 @@
         </div>
     </div>
 </div>
+<div class="row" ng-repeat="page in articles.pages">
+    <div class="col-xs-12 col-sm-12">
+         <div class="media" style="margin-top: 20px;">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object img-thumbnail"
+                                 src="images/{{page.image}}" style="height: 200px;" alt="Кіт">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{page.title}}</h2>
+
+
+                        <p>{{page.text}}</p>
+
+                        <p><a class="btn btn-primary btn-xs" href="#">Читати далі&raquo;</a></p>
+                    </div>
+                </div>
+    </div>
+
+</div>
+
+
 
