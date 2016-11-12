@@ -1,23 +1,66 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <!--<div ng-repeat="item in articles.items">-->
+        <!--<li>{{item}}</li>-->
+        <!--</div>-->
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item" ng-class="{active:!$index}" ng-repeat="article in main.carouselArticles">
+                    <img class="img-responsive"
+                         src="images/{{article.image}}" alt="Котик">
+
+                    <div class="carousel-caption">
+                        <h2>{{article.title}}
+                        </h2>
+
+                        <p>{{article.caption}}</p>
+
+                        <p><a class="btn btn-primary btn-xs" href="#">Читати далі &raquo;</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row" ng-repeat="article in main.articles">
+    <div class="col-xs-12 col-sm-12">
+         <div class="media" style="margin-top: 20px;">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object img-thumbnail"
+                                 src="images/{{article.image}}" style="height: 200px;" alt="Кіт">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{article.title}}</h2>
+
+
+                        <p>{{article.text}}</p>
+
+                        <p><a class="btn btn-primary btn-xs" href="#">Читати далі&raquo;</a></p>
+                    </div>
+                </div>
+    </div>
+
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
