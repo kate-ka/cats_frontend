@@ -9,13 +9,19 @@
  * Main module of the application.
  */
 angular
-  .module('kishkaApp', ['ui.router'])
+  .module('kishkaApp', ['ui.router', 'ngSanitize', 'ngCookies'])
+
+
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
+
+
                 url: '/',
                 templateUrl: 'views/main.html',
                 controller: 'MainPageCtrl as main'
-            });
+            }
+        )
+
     } ]);

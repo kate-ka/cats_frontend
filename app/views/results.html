@@ -1,0 +1,12 @@
+
+<div ng-repeat="choice in main.chartData">
+    <p>{{ choice.text }}</p>
+    <div>
+        <div style="width:{{choice.width}}px; background-color:#221d46; height: 20px; display: inline-block">&nbsp;</div>
+        <div style="display: inline-block">{{choice.percentage}} % </div>
+    </div>
+
+</div>
+<div>Всього проголосовало {{main.total}}</div>
+
+
