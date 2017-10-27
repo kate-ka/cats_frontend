@@ -3,10 +3,31 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
-## Build & development
+# cats_backend
 
-Run `grunt` for building and `grunt serve` for preview.
+Cats_backend is a simple blog.
 
-## Testing
+The project contains two apps:
+  - Articles, all articles are added and edited from the admin.
+  - Polls.
 
-Running `grunt test` will run the unit tests with karma.
+
+## Technology Stack and Tools
+
+- Python 3.5
+- Django 1.10
+- Django REST framework 3.5
+- Django-ckeditor 5.1
+- Angular 1.5
+- Bootstrap 3
+
+## Installation guideline
+
+ - Activate your virtual environment: `source <virtual_env>/bin/activate`
+ - Install needed packages: `pip install -r requirements.txt`
+ - Run Django server: `python manage.py runserver`
+ 
+ - Run Frontend: `npm install`, `bower install`, `grunt serve`
+
+Backend can be found here: https://github.com/kate-ka/cats_backend.
+
