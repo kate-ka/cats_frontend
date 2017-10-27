@@ -3,7 +3,7 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
-# cats_backend
+# cats_frontend
 
 Cats_backend is a simple blog.
 
