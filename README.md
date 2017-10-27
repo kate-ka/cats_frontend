@@ -5,7 +5,7 @@ version 0.15.1.
 
 # cats_frontend
 
-Cats_backend is a simple blog.
+Cats is a simple blog.
 
 The project contains two apps:
   - Articles, all articles are added and edited from the admin.
